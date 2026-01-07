@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  @apply bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Premium Tile Style - Keeping custom class but using Tailwind utilities inside where possible or keeping compatible */
+.tile-base {
+  @apply bg-[#fdfbf7] dark:bg-slate-700 border border-slate-200 dark:border-slate-600 border-b-[3px] rounded-lg shadow-md text-slate-800 dark:text-white flex items-center justify-center font-bold select-none transition-transform transition-shadow duration-100;
+}
+
+.tile-base:active {
+  @apply translate-y-[2px] border-b shadow-sm;
+}
